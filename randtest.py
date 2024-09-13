@@ -4,11 +4,11 @@ from random import randrange
 import time
 import numpy
 
-def rint(num):
+def rint(num, num2):
     timesint = []
     for i in range(num):
         start_time = time.time()
-        for i in range(1000):
+        for i in range(num2):
             print(f"Iteration {i}")
             #chose generation
             gen = (randint(1, 3))
@@ -119,11 +119,11 @@ def rint(num):
         timesint.append(exeint)
     return(timesint)
 
-def rrange(num):
+def rrange(num, num2):
     timesrange = []
     for i in range(num):
         start_time = time.time()
-        for i in range(1000):
+        for i in range(num2):
             print(f"Iteration {i}")
             #chose generation
             gen = (randrange(1, 4, 1))
@@ -239,10 +239,10 @@ def meancalc(q):
     return(mean)
 
 def compare(r, r2):
-    diffrence = r2 - r
+    diffrence = r - r2
     return(diffrence)
 
-raint = meancalc(q=rint(num=50))
-rarange = meancalc(q=rrange(num=50))
-diffrence2 = compare(r=rarange, r2=raint)
+raint = meancalc(q=rint(num=50, num2=1000))
+rarange = meancalc(q=rrange(num=50, num2=1000))
+diffrence2 = compare(r=raint, r2=rarange)
 print(f"The average of the randrange runs is {rarange} seconds.\nThe average of randint is {raint} seconds.\nThe diffrence between the two is {diffrence2} seconds.")
