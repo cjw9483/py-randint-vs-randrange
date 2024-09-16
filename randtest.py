@@ -245,4 +245,4 @@ def compare(r, r2):
 raint = meancalc(q=rint(num=50, num2=1000))
 rarange = meancalc(q=rrange(num=50, num2=1000))
 diffrence2 = compare(r=raint, r2=rarange)
-print(f"The average of the randrange runs is {rarange} seconds.\nThe average of randint is {raint} seconds.\nThe diffrence between the two is {diffrence2} seconds.")
+print(f"The average of randint is {raint} seconds.\nThe average of the randrange runs is {rarange} seconds.\nThe diffrence between the two is {diffrence2} seconds.")
